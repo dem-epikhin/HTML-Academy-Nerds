@@ -1,0 +1,423 @@
+/* Fonts */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"),
+       url("../fonts/roboto.woff2") format("woff2"),
+       url("../fonts/roboto.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Roboto"),
+       url("../fonts/robotomedium.woff2") format("woff2"),
+       url("../fonts/robotomedium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto"),
+       url("../fonts/robotobold.woff2") format("woff2"),
+       url("../fonts/robotobold.woff") format("woff");
+}
+
+/* Variables */
+:root {
+  /* Global */
+  --text-color-main: #000000;
+  --text-color-secondary: #283136;
+
+  /* Buttons */
+  --text-color-buttons: #ffffff;
+  --button-color-basic: #FB565A;
+  --button-color-applications: #00CA74;
+  --button-color-presentations: #EFC849;
+  --hover-button-basic: #E74246;
+  --hover-button-applications: #00BC6C;
+  --hover-button-presentations: #EAB534;
+
+  /* Header */
+  --background-color-header: #EEEEEE;
+
+  /* partners */
+  --basic-partners-opasity: 0.2;
+  --hover-partners-opasity: 1;
+
+  /* Contacts */
+  --text-color-contacts: #666666;
+
+  /* Footer */
+  --text-color-footer: #444444;
+  --background-social: linear-gradient(0deg, #E1E1E1, #E1E1E1), #FFFFFF;
+  --hover-background-social: linear-gradient(0deg, #E74246, #E74246), #FFFFFF;
+
+  /* Other hover and focus */
+  --hover-logo-opasity: 0.7;
+  --hover-main-nav: #FB565A;
+
+  /* catalog filter */
+  --background-button-filter: #EEEEEE;
+  --hover-background-button-filter: #DFDFDF;
+
+  /* Catalog item description */
+  --text-color-description: #666666;
+
+  /* Sort */
+  --color-text-sort: #000000;
+
+
+  /* Pagination */
+  --background-pagination: #EEEEEE;
+  --hover-background-pagination: #DFDFDF;
+  --current-background-pagination: #FFFFFF;
+}
+
+
+/* Global */
+
+body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--text-color-main);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Header */
+.page-header {
+  background-color: var(--background-color-header);
+}
+
+/* Header logo */
+.page-header-logo:hover,
+.page-header-logo:focus {
+  opacity: var(--hover-logo-opasity);
+}
+
+
+/* Page navigation */
+.page-navigation {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation a,
+.cart-link {
+  color: var(--text-color-main);
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus,
+.cart-link:hover,
+.cart-link:focus {
+  color: var(--hover-main-nav);
+}
+
+/* Main slider */
+.main-slider {
+  background-color: var(--background-color-header)
+}
+
+.slider-item p {
+  color: var(--text-color-secondary);
+}
+
+.slider-item .slider-slogan {
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+  color: var(--text-color-main);
+}
+
+/* Services */
+.services-list {
+  list-style: none;
+}
+
+.services-list h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.services-list p {
+  color: var(--text-color-secondary);
+}
+
+/* About */
+.about-info {
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 45px;
+}
+
+.about-features {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-color-secondary);
+}
+
+.features-list {
+  list-style: none;
+  color: var(--text-color-secondary);
+}
+
+.advantages p {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-color-main);
+}
+
+.advantages-list dt {
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--basic-light-black);
+}
+
+.advantages-list dd {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 64px;
+  color: var(--basic-black);
+}
+
+
+/* Partners */
+.partners-list {
+  list-style: none;
+}
+
+.partners-item {
+  opacity: var(--basic-partners-opasity);
+}
+
+.partners-item:hover {
+  opacity: var(--hover-partners-opasity);
+}
+
+/* Contacts */
+.contacts p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--text-color-contacts);
+}
+
+.contacts .contacts-name {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--text-color-main);
+}
+
+.contacts-phone {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--text-color-contacts);
+}
+
+/* Main footer */
+.main-footer {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--text-color-footer);
+}
+
+.main-footer p:first-of-type {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 36px;
+  color: var(--text-color-main);
+}
+
+/* Buttons */
+
+.button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--text-color-buttons);
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: var(--button-color-basic);
+  border: none;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  background-color: var(--hover-button-basic);
+}
+
+.button.button-applications {
+  background-color: var(--button-color-applications);
+}
+
+.button.button-applications:hover,
+.button.button-applications:focus,
+.button.button-applications:active {
+  background-color: var(--hover-button-applications);
+}
+
+.button.button-presentations {
+  background-color: var(--button-color-presentations);
+}
+
+.button.button-presentations:hover,
+.button.button-presentations:focus,
+.button.button-presentations:active {
+  background-color: var(--hover-button-presentations);
+}
+
+/* Social button */
+.footer-social {
+  list-style: none;
+}
+
+.social-button {
+  color: var(--text-color-buttons);
+  background-color: var(--background-social);
+}
+
+.social-button:hover,
+.social-button:focus {
+  background-color: var(--hover-background-social);
+}
+
+/* Catalog */
+
+.page-catalog h2 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.page-title {
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+  counter-reset: var(--text-color-main);
+  background-color: var(--background-color-header);
+}
+
+/* Filter */
+.filter legend {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.filter-label-range label {
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.filter ul {
+  list-style: none;
+  line-height: 20px;
+  color: var(--text-color-secondary);
+}
+
+.filter-button {
+  background-color: var(--background-button-filter);
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  background-color: var(--hover-background-button-filter);
+}
+
+/* Sort */
+.sort-list {
+  list-style: none;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.sort-item a {
+  color: var(--color-text-sort);
+  opacity: 0.3;
+}
+
+.sort-item a:hover,
+.sort-item a:focus {
+  color: var(--color-text-sort);
+  opacity: 0.6;
+}
+
+/* Catalog */
+
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-item-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.catalog-item a {
+  color: var(--basic-black);
+}
+
+.catalog-item-description {
+  line-height: 18px;
+  color: var(--text-color-description);
+}
+
+/* pagination */
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-item {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  background-color: var(--background-pagination);
+}
+
+.pagination-current {
+  background-color: var(--current-background-pagination);
+}
+
+.pagination-item:hover,
+.pagination-item:focus {
+ background-color: var(--hover-background-pagination);
+}
+
+.pagination-item a {
+  color: var(--basic-black);
+}

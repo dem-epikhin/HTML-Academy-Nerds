@@ -106,6 +106,59 @@ img {
   height: auto;
 }
 
+/* decor-items */
+/* Buttons */
+
+.button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--text-color-buttons);
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: var(--button-color-basic);
+  border: none;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  background-color: var(--hover-button-basic);
+}
+
+.button.button-applications {
+  background-color: var(--button-color-applications);
+}
+
+.button.button-applications:hover,
+.button.button-applications:focus,
+.button.button-applications:active {
+  background-color: var(--hover-button-applications);
+}
+
+.button.button-presentations {
+  background-color: var(--button-color-presentations);
+}
+
+.button.button-presentations:hover,
+.button.button-presentations:focus,
+.button.button-presentations:active {
+  background-color: var(--hover-button-presentations);
+}
+
+.social-button {
+  color: var(--text-color-buttons);
+  background-color: var(--background-social);
+}
+
+.social-button:hover,
+.social-button:focus {
+  background-color: var(--hover-background-social);
+}
+
+
+
 /* Grid */
 
 .page {
@@ -117,7 +170,7 @@ img {
 .container {
   width: 1160px;
   margin-right: auto;
-  margin-left: auto;
+  margin-left: auto; 
 }
 
 
@@ -173,14 +226,14 @@ img {
 
 .slider-item {
   display: grid;
-  align-content: start;
+  align-items: start;
   grid-template-columns: auto 1fr;
   grid-template-rows: repeat(3, auto);
 }
 
 .slider-slogan {
   max-width: 538px;
-  grid-column: 1 / 2;
+  grid-column: 1 / -1;
   grid-row: 1 / 2;
 }
 
@@ -214,6 +267,7 @@ img {
 .services-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
 
   list-style: none;
   margin: 0;
@@ -221,10 +275,6 @@ img {
   
 }
 .services-item {
-  margin-right: 100px;
-}
-
-.services-item:nth-child(3) {
   margin-right: 60px;
 }
 
@@ -321,14 +371,17 @@ max-width: 646px;
   margin: 0;
   padding: 0;
 
-  display: grid;
+  /* Лучше сделать на флексах
+   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
-  justify-content: center;
+  justify-items: center;
+  align-self: center; */
 }
 
 .partners-item {
   opacity: var(--basic-partners-opasity);
+  min-height: 184px;
 }
 
 .partners-item:hover {
@@ -358,6 +411,9 @@ max-width: 646px;
   color: var(--text-color-contacts);
 }
 
+.page-main {
+  margin-bottom: 68px;
+}
 /* Main footer */
 .main-footer {
   font-weight: 400;
@@ -366,57 +422,35 @@ max-width: 646px;
   color: var(--text-color-footer);
 
   display: grid;
-  grid-template-columns: auto 1fr;
-  grid-column-gap: 140px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-column-gap: 40px;
+  align-items: center;
+
+  margin-bottom: 68px;
 }
 
-.main-footer p:first-of-type {
+.main-footer .friends {
   font-weight: 700;
   font-size: 36px;
   line-height: 36px;
   color: var(--text-color-main);
 }
 
-/* Buttons */
-
-.button {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 18px;
-  text-align: center;
-  color: var(--text-color-buttons);
-  vertical-align: middle;
-  text-transform: uppercase;
-  background-color: var(--button-color-basic);
-  border: none;
+.main-footer .friends {
+  grid-column: 2 / -1;
+  grid-row: 1 / 2;
+}
+.main-footer .discount {
+  grid-column: 2 / -1;
+  grid-row: 2 / -1;
 }
 
-.button:hover,
-.button:focus,
-.button:active {
-  background-color: var(--hover-button-basic);
+.main-footer p {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
-
-.button.button-applications {
-  background-color: var(--button-color-applications);
-}
-
-.button.button-applications:hover,
-.button.button-applications:focus,
-.button.button-applications:active {
-  background-color: var(--hover-button-applications);
-}
-
-.button.button-presentations {
-  background-color: var(--button-color-presentations);
-}
-
-.button.button-presentations:hover,
-.button.button-presentations:focus,
-.button.button-presentations:active {
-  background-color: var(--hover-button-presentations);
-}
-
 /* Social button */
 .footer-social {
   list-style: none;
@@ -424,17 +458,11 @@ max-width: 646px;
   padding: 0;
  
   grid-column: 1 / 2;
-  grid-row: span 2;
+  grid-row: 1 / -1;
 }
 
 .social-button {
-  color: var(--text-color-buttons);
-  background-color: var(--background-social);
-}
-
-.social-button:hover,
-.social-button:focus {
-  background-color: var(--hover-background-social);
+  color: black;
 }
 
 /* Catalog */

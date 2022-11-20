@@ -113,19 +113,7 @@ img {
 }
 
 /* decor-items */
-/* Buttons */
 
-.button {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 18px;
-  text-align: center;
-  color: var(--text-color-buttons);
-  vertical-align: middle;
-  text-transform: uppercase;
-  background-color: var(--button-color-basic);
-  border: none;
-}
 
 .button:hover,
 .button:focus,
@@ -194,23 +182,23 @@ img {
 /* Button */
 .button {
   display: inline-block;
-  padding: 17px 40px;
+  padding: 16px 40px;
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  color: #ffffff;
+  color: var(--text-color-buttons);
   vertical-align: top;
   font-family: 'Roboto';
   font-style: normal;
-  background: #FB565A;
+  background-color: var(--button-color-basic);
   border-radius: 3px;
   border: none;
   cursor: pointer;
 }
- 
+ /* Buttons */
 .button:hover {
   background: #E74246;
 }
@@ -457,7 +445,7 @@ img {
 /* Services */
 
 .services {
-  padding-bottom: 78px;
+  padding-bottom: 80px;
   margin-bottom: 39px;
   border-bottom: 2px solid var(--background-color-header);
 }
@@ -476,12 +464,29 @@ img {
   margin-right: 60px;
 }
 
-.services-item img {
-  padding: 0;
-  margin: 0;
-  margin-bottom: 25px;
+.services-item::after {
+  content: '';
+  width: 300px;
+  height: 146px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
   order: -1;
+  margin-bottom: 25px;
 }
+
+.websites-img::after {
+  background-image: url(../images/services/websites.png);
+}
+
+.apps-img::after {
+  background-image: url(../images/services/applications.png);
+}
+
+.presentations-img::after {
+  background-image: url(../images/services/presentation.png);
+}
+
+
 
 .services-list h3 {
   padding: 0;
@@ -582,6 +587,16 @@ margin-bottom: 40px;
   grid-template-rows: 208px min-content;
 }
 
+.statistics::after {
+  content: '';
+  display: block;
+  width: 360px;
+  height: 280px;
+  background-image: url(../img/nerds-illustration.png);
+  background-repeat: no-repeat;
+  order: -1;
+}
+
 .statistics-list {
   display: grid;
   gap: 5px;
@@ -629,7 +644,7 @@ line-height: 40px;
 .partners {
 margin-bottom: 80px;
 padding-top: 48px;
-padding-bottom: 32px;
+padding-bottom: 38px;
 border-top: 2px solid var(--background-button-filter);
 border-bottom: 2px solid var(--background-button-filter);
 }
@@ -646,19 +661,24 @@ border-bottom: 2px solid var(--background-button-filter);
 }
 
 .partners-item {
-  opacity : var(--basic-partners-opasity);
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
+  width: 250px;
 }
 
-.partners-list li::after {
+.partners-item img {
+  opacity: 0.2;
+}
+
+.partners-list .partners-item::after {
   content: "";
-  display: block;
+  /* display: block; */
   position: absolute;
   width: 2px;
   height: 52px;
-  right: -52px;
+  right: -26px;
   background-color: #eee;
   opacity: 1;
 }
@@ -668,8 +688,8 @@ border-bottom: 2px solid var(--background-button-filter);
   display: none;
 }
 
-.partners-item:hover {
-  opacity: var(--hover-partners-opasity);
+.partners-item img:hover {
+  opacity: 1;
 }
 
 
@@ -732,23 +752,49 @@ border-bottom: 2px solid var(--background-button-filter);
   padding: 0;
 }
 
-.social-item {
+/* .sort-item {
+  display: flex;
+} */
+
+.social-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 10px;
-  margin-bottom: 10px;
   background-color: var(--background-social);
   width: 80px;
   height: 80px;
   border-radius: 50%;
+  color: inherit;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
-.social-item:hover {
+.social-button::before {
+  content: '';
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+}
+
+.vk::before {
+  background-image: url(../images/social/vk-icon.svg);
+}
+
+.facebook::before {
+  background-image: url(../images/social/fb-icon.svg);
+}
+
+.instagram::before {
+  background-image: url(../images/social/insta-icon.svg);
+}
+
+.social-button:hover {
   background-color: var(--hover-background-social);
 }
 
-.social-item:nth-child(4n) {
+.social-button:nth-child(4n) {
   margin-right: 0;
 }
 

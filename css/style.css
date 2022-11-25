@@ -57,6 +57,7 @@
 
   /* Contacts */
   --text-color-contacts: #666666;
+  --background-color-info: #ffffff;
 
   /* Footer */
   --text-color-footer: #444444;
@@ -753,6 +754,29 @@ border-bottom: 2px solid var(--background-button-filter);
 .page-main {
   margin-bottom: 68px;
 }
+
+/* contacts */
+.contacts {
+  background-image: url('../img/map/map.png');
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.contacts-info {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 50px;
+
+  width: 319px;
+  background-color: var(--background-color-info);
+}
+
+.contacts-name {
+  margin: 0;
+}
+
+
 /* Main footer */
 .main-footer {
   font-weight: 400;
